@@ -14,13 +14,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Flutter layout demo',
-      home: Scaffold(
-        body: Center(
-          child: SearchPage(),
-        ),
-      ),
+    return MaterialApp(
+      routes: {
+        '/': (context) => Home(),
+        '/search': (context) => SearchPage(),
+        '/tickets': (context) => TicketPage(),
+        '/favourites': (context) => FavouritesPage(),
+        '/user': (context) => UserPage(),
+      },
     );
   }
 }
